@@ -19,6 +19,24 @@ day 1 :
           System.out.println("Hello");
     }
 }
+    public class Main{
+        public static void main(String[]args){
+          int a = 3;
+          if(a==4)
+          System.out.println(a-5);
+          else
+          System.out.println(a+8);
+        }
+}
+    public class Main{
+        public static void main(String[]args){
+          if(2+2==4)
+         System.out.println("Welcome");
+         else{
+             System.out.println("Update your details");
+         }
+      }
+    }
 PALINDROME NUMBER
 import java.util.*;
 class Main{
