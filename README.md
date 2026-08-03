@@ -1,5 +1,24 @@
 # KARE_PHASE2_DHINESH-
 day 1 :
+   public class Main{
+        public static void main(String[]args){
+            System.out.println("cse\"KARE\"Students");
+        }
+    }
+        public class Main{
+        public static void main(String[]args){
+            System.out.print("\\n");
+    }
+}
+
+    public class Main{
+        public static void main(String[]args){
+          if(true)
+          System.out.println("hi");
+          else
+          System.out.println("Hello");
+    }
+}
 PALINDROME NUMBER
 import java.util.*;
 class Main{
