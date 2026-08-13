@@ -1,0 +1,144 @@
+//write a java program TO check the given number is strong number or not ex:
+//1)get the i/p from user i/p n=145
+//2)find the factorial each digit the given number
+//3)find sum of the factorial value sum=1+24+120=145
+//4)compare sum and given number
+//5)if sum ==n  print strong number 
+145
+Strong number
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int fact=1,d,temp=n,sum=0;
+        while(n!=0){
+            fact=1;
+            d=n%10;
+            for(int i=1;i<=d;i++){
+                fact=fact*i;
+            }
+            sum+=fact;
+            n=n/10;
+        }
+        if (sum==temp)
+            System.out.println("Strong number");
+        else
+            System.out.println("not a Strong number");
+    }
+}
+//write a java program TO check the given number is Armstrong number or not ex:
+//1)get the i/p from user i/p n=153
+//2)count the no of digits =3
+//3)separateeach digit makes the power value as per count value
+//4)sum all the power values
+//5)if sum ==n  print Armstrong number 
+1634
+ArmStrong number
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d,temp=n,sum=0,c=0;
+        while(n!=0){
+            n=n/10;
+            c++;
+        }
+        n=temp;
+        while(n!=0){
+            d=n%10;
+            sum+=(int)Math.pow(d, c);
+            n=n/10;
+        }
+        if (sum==temp)
+            System.out.println("ArmStrong number");
+        else
+            System.out.println("not a ArmStrong number");
+    }
+}
+//write a java program TO check the given number is adam number or not ex:
+//1)get the i/p from user i/p n=12
+//2)find the square of the given number 12*12=144
+//3)find the reverse of given num 21
+//4)find the square of the reverse num 21*21=441
+//5)reverse the square of reverse number 144
+//6)sn==rsrn if both are equal print adam number
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d,d1,ans=0,sqrn,rsqrn=0;
+        int sn=n*n;
+        while(n!=0){
+            d=n%10;
+            ans=ans*10+d;
+            n=n/10;
+        }
+        sqrn=ans*ans;
+        while(sqrn!=0){
+            d1=sqrn%10;
+            rsqrn=rsqrn*10+d1;
+            sqrn=sqrn/10;
+        }
+        if (sn==rsqrn)
+            System.out.println("Adam number");
+        else
+            System.out.println("not a Adam number");
+    }
+}
+// AMICABLE PAIR - (220, 284)  (1184, 1210) (2620, 2924) (5020, 5564) (6232, 6368)
+// write a java program to check the given number is adam number or not 
+// 1. get the 2 NUMBERS inPut from the user n1=220;n2=284
+// 2. find the factors of n1 , find the sum of factors of n1 . s1
+// 3. find the sum of factors of n2 = s2
+// 4. compare s1==n2 && s2==n1 if conditionis true print amicable pair
+1184
+1210
+Amicable NUMBER
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int n1 = sc.nextInt();
+	    int n2 = sc.nextInt();
+	    int s1=0,s2=0;
+	    for(int i=1;i<n1;i++){
+	       if(n1%i==0){
+	           s1=s1+i;
+	            }
+	        }
+	    for(int i =1;i<n2;i++){
+	       if(n2%i==0){
+	           s2=s2+i;
+	            }
+	        }
+	    if(s1==n2 && s2==n1){
+	        System.out.println("Amicable NUMBER");
+	    }else{
+	        System.out.println("NOT A Amicable NUMBER");
+	    }
+		
+	}
+}
+prime number or not
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int c=0;
+	    for(int i=2;i<n/2;i++){
+	        if(n%i==0)
+	        c++;
+	    }
+	    if(c==0)
+	    System.out.println("prime number ");
+	    else
+	    System.out.println("not a prime");
+	}
+}
