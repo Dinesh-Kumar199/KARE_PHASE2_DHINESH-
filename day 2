@@ -1,0 +1,183 @@
+1)//program for pre and post incriment and decriment.
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = a++;
+        int c = b--;
+        int d = --c;
+        int e = d++;
+        int f = e--;
+        System.out.println(f++);
+        System.out.println(a+" "+b+" "+c+" "+d+" "+e+" "+f);
+        
+    }
+}
+
+Output:
+99
+98
+100 98 98 99 97 99
+
+
+//program for conditional statement - if/else.
+public class Main{
+    public static void main(String args[]){
+        if(true)
+        System.out.println("hi");
+        else
+        System.out.println("hello");
+    }
+}
+
+Output:
+hi
+
+
+//program for conditional statement - if/else.
+public class Main{
+    public static void main(String args[]){
+        int n = 3;
+        if(n==4)
+        System.out.println(n+5);
+        else
+        System.out.println(n-8);
+    }
+}
+
+Output:
+-5
+
+
+//program for conditional statement - if/else.
+public class Main{
+    public static void main(String args[]){
+        if(!true)
+        System.out.println(9+5);
+        else
+        System.out.println(5*6/2+10);
+    }
+}
+
+Output:
+25
+
+
+//program for conditional statement - if/else with error.
+public class Main{
+    public static void main(String args[]){
+        if(2+2==4)
+        System.out.print("welcome");
+        System.out.print("update your details");
+        else
+        System.out.println(5*6/2+10);
+    }
+}
+
+Output:
+Main.java:7: error: 'else' without 'if'
+        else
+        ^
+1 error
+//write a java programe to print a number is odd or even
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        if (a%2==0)
+        System.out.println("even");
+        else
+            System.out.println("odd");
+        
+    }
+}
+
+//write java programe to check wheather person is eligable to vote or not
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        if (a>=18)
+            System.out.println("Eligible to Vote");
+        else
+            System.out.println("Not Eligible to Vote");
+    }
+}
+//i/p 9       o/p Divisable by 3
+//i/p 11      o/p not divisable by 3 and remainder is 2
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        if (a%3==0)
+            System.out.println("Divisable by 3");
+        else
+            System.out.println("Not Divisable by 3 and Remainder is "+a%3);
+    }
+}
+//i/p 12 10       o/p 12 is Greater than 10 
+//i/p 3 56      o/p 56 is Greater than 3
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        if (a>b)
+            System.out.println(a+" is Greater than "+b);
+        else if (a==b) {
+            System.out.println("both are equal");
+        }
+        else
+            System.out.println(b+" is Greater than "+a);
+    }
+}
+//i/p 12 10 34      o/p 10 is smaller 
+//i/p 3 56  1    o/p 1 is smaller
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        if (a<b && a<c)
+            System.out.println(a+" is samller than "+b+" and "+c);
+        else if (b<c && b<c) 
+            System.out.println(b+" is samller than "+a+" and "+c);
+        else
+            System.out.println(c+" is samller than "+b+" and "+a);
+    }
+}
+///railway timeing
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int h=sc.nextInt();
+        int m=sc.nextInt();
+        int n=sc.nextInt();
+        if((h==12 || h==24) || (m>=60 || n>=60)){
+            System.out.println("invalid time");
+        }
+        else{
+            System.out.println("valid time");
+        }
+    }
+}
+///leap year
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int year=sc.nextInt();
+        if (year%400==0 || (year%100!=0 && year%4==0))
+            System.out.println("leap year");
+        else
+            System.out.println("not a leap year");
+    }
+}
