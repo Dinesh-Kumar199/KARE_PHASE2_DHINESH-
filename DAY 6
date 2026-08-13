@@ -1,0 +1,138 @@
+//write a java program to count the odd even digits in a given number.
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int odd=0,even=0,d;
+        while(n!=0){
+            d=n%10;
+            if(d%2==0)
+                even++;
+            else
+                odd++;
+            n=n/10;
+        }
+        System.out.println("even count is : "+even+"   odd count is: "+odd);
+        
+    }
+}
+//write a java program TO COUNT the prime digit count in the given number
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int odd=0,prime=0,d;
+        while(n!=0){
+            d=n%10;
+            if(d==2||d==3||d==5||d==7)
+                prime++;
+            n=n/10;
+        }
+        System.out.println("prime count is : "+prime);
+        
+    }
+}
+//write a java program TO reverse the number without using right formation
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d;
+        while(n!=0){
+            d=n%10;
+            System.out.print(d);
+            n=n/10;
+        }
+        System.out.println();
+        
+    }
+}
+//write a java program TO print a num is palindrome or not
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d,temp=n,ans=0;
+        while(n!=0){
+            d=n%10;
+            ans=ans*10+d;
+            n=n/10;
+        }
+        if (ans==temp)
+            System.out.println("its a palindrome number");
+        else
+            System.out.println("its not a palindrome number");
+        
+    }
+}
+//write a java program TO check the given number is harshad num or not ex:18
+//1)get the user i/p n=18
+//2)find the sum of digits sum==9 1+8==9
+//3)to check the given num is completely divisable by  sum of digits 18%9==0
+//4)if it is true print harshad number
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d,temp=n,ans=0;
+        while(n!=0){
+            d=n%10;
+            ans+=d;
+            n=n/10;
+        }
+        if (temp%ans==0)
+            System.out.println("Harshad number");
+        else
+            System.out.println("not a Harshad number");
+        
+    }
+}
+//write a java program TO check the given number is perfect num or not ex:18
+//1)get the i/p from user i/p n=6
+//2)find the factor of n value including 1 excluding the given number
+//3)find sum of the factors sum=1+2+3=6
+//4)compare sum and given number
+//if both are equal print perfect number 
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int temp=n,sum=0;
+        
+        for (int i=1;i<n;i++){
+            if (n%i==0){
+                sum+=i;
+            }
+        }
+    
+        if (sum==temp)
+            System.out.println("perfect number");
+        else
+            System.out.println("not a perfect number");
+        
+    }
+}
+//write a java programe to fine the nth term if fibinocci series by using recursion
+import java.util.*;
+public class Main {
+        static int fib(int n){
+            if(n<=1)
+                return n;
+            return fib(n-1)+fib(n-2);
+        }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int ans=fib(n);  
+        System.out.println(ans);
+
+    }
+}
