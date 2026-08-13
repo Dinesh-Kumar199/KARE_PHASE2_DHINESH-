@@ -1,0 +1,138 @@
+1)public class index {
+    public static void main(String[] args) {
+        System.out.println("cse \"KARE\" students");
+    }
+}
+2)public class index {
+    public static void main(String[] args) {
+        System.out.println("\\n");
+    }
+}
+3)import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        System.out.println("Enter a number:");
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        System.out.println(a);
+    }
+}
+4)//write java program to print double input from user and printed
+import java.util.*;
+class Main{
+    public static  void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        double d = sc.nextDouble();
+        System.out.print(d);
+    }
+}
+5)
+
+import java.util.*;
+import java.lang.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        char ch=sc.next().charAt(0);
+        System.out.println("The character is :"+ch);
+    }
+
+}
+
+
+
+6)
+
+import java.util.*;
+import java.lang.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        float f=sc.nextFloat();
+        System.out.printf("%.2f",f);
+    }
+
+}
+
+7)//write a java proram to print double input from user and print it.
+
+import java.util.*;
+import java.lang.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        double d=sc.nextDouble();
+        System.out.print(d);
+    }
+
+}
+
+//write java programe to find the sum of elements in given range
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int s=sc.nextInt();
+        int e=sc.nextInt();
+        int res=0;
+        for(int i=s;i<=e;i++)
+            res=res+i;
+            System.out.print(res+" ");
+    }
+}
+//write java programe to find factors of given number
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int s=sc.nextInt();
+        for(int i=1;i<=s/2;i++){
+            if(s%i==0)
+                System.out.println(i);
+
+        }System.out.println(s);
+
+    }
+}
+//write java programe to find factorial of a given number
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int s=sc.nextInt();
+        int fact=1;
+        for(int i=1;i<=s;i++){
+            if(s<=0)
+                System.out.println("give the number greater than 0");
+            fact*=i;
+        }System.out.println(fact);
+
+    }
+}
+//write java programe to print multiplication table
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int s=sc.nextInt();
+        for(int i=1;i<=10;i++){
+            System.out.println(s+"*"+i+"="+s*i);
+        }
+
+    }
+}
+//write java programe to print multiplication table without *
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int s=sc.nextInt();
+        int e=sc.nextInt();
+        int sum=0;
+        for(int i=1;i<=e;i++){
+            sum=sum+s;
+            System.out.println(s+"*"+i+"="+sum);
+        }
+
+    }
+}
