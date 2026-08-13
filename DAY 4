@@ -1,0 +1,420 @@
+//write java programe *****\n*****\n*****\n*****\n*****
+/base-1 pattern
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<n;col++){
+                System.out.print("*");
+            }
+        }
+
+    }
+}
+
+
+//write java programe *\n**\n***\n****\n*****
+//base 2 patter
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<=row;col++){
+                System.out.print("*");
+            }
+        }
+
+    }
+}
+
+
+//write java programe *****\n****\n***\n**\n*
+base 3 pattern
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<n-row;col++){
+                System.out.print("*");
+            }
+        }
+
+    }
+}
+
+
+//write java programe *\n***\n*****\n*******
+base 4 paatern
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<2*row-1;col++){
+                System.out.print("*");
+            }
+        }
+
+    }
+}
+
+//write java programe     *****\n   *****\n  *****\n *****\n*****
+
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<n-row-1;col++)
+                System.out.print(" ");
+            for (col=0;col<n;col++){
+                System.out.print("*");
+            }
+        }
+
+    }
+}
+//write java programe*****\n ****\n  *****\n   *****\n    *****
+
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<=row-1;col++)
+                System.out.print(" ");
+            for (col=0;col<n;col++){
+                System.out.print("*");
+            }
+        }
+
+    }
+}
+//write java programe    *****\n   *****\n  *****\n *****\n*****
+
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<=row;col++)
+            System.out.print("*");
+            for (col=0;col<n-row-1;col++)
+            System.out.print(" ");
+            for (col=0;col<=row;col++)
+            System.out.print("*");
+            
+        }
+
+    }
+}
+5
+*        *
+**      **
+***    ***
+****  ****
+**********
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<=row;col++)
+            System.out.print("*");
+            for (col=0;col<n-row-1;col++)
+            System.out.print(" ");
+            for (col=0;col<n-row-1;col++)
+            System.out.print(" ");
+            for (col=0;col<=row;col++)
+            System.out.print("*");
+            
+        }
+
+    }
+}
+5
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n-1;row++,System.out.println()){
+            for (col=0;col<=row;col++)
+            System.out.print("*");
+        }
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<n-row;col++)
+            System.out.print("*");
+        }
+
+
+    }
+}
+5
+*        *
+**      **
+***    ***
+****  ****
+**********
+****  ****
+***    ***
+**      **
+*        *
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n-1;row++,System.out.println()){
+            for (col=0;col<=row;col++)
+            System.out.print("*");
+            for(col=0;col<n-row-1;col++)
+            System.out.print(" ");
+            for(col=0;col<n-row-1;col++)
+            System.out.print(" ");
+            for (col=0;col<=row;col++)
+            System.out.print("*");
+        }
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<n-row;col++)
+            System.out.print("*");
+            for (col=0;col<=row-1;col++)
+            System.out.print(" ");
+            for (col=0;col<=row-1;col++)
+            System.out.print(" ");
+            for(col=0;col<n-row;col++)
+            System.out.print("*"); 
+        }
+        
+
+
+    }
+}
+5
+**********
+****  ****
+***    ***
+**      **
+*        *
+*        *
+**      **
+***    ***
+****  ****
+**********
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        
+        for(row=0;row<n;row++,System.out.println()){
+            for (col=0;col<n-row;col++)
+            System.out.print("*");
+            for (col=0;col<=row-1;col++)
+            System.out.print(" ");
+            for (col=0;col<=row-1;col++)
+            System.out.print(" ");
+            for(col=0;col<n-row;col++)
+            System.out.print("*"); 
+        }
+        for(row=0;row<n-1;row++,System.out.println()){
+            for (col=0;col<=row;col++)
+            System.out.print("*");
+            for(col=0;col<n-row-1;col++)
+            System.out.print(" ");
+            for(col=0;col<n-row-1;col++)
+            System.out.print(" ");
+            for (col=0;col<=row;col++)
+            System.out.print("*");
+        }
+        
+
+
+    }
+}
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<n;row++,System.out.println()){
+            for(col=0;col<n;col++){
+                System.out.print(row+1);
+            }
+        }
+        
+
+
+    }
+}
+1
+22
+333
+4444
+55555
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<=n;row++,System.out.println()){
+            for(col=0;col<row;col++){
+                System.out.print(row);
+            }
+        }
+        
+
+
+    }
+}
+5
+12345
+1234
+123
+12
+1
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<=n;row++,System.out.println()){
+            for(col=0;col<n-row;col++){
+                System.out.print(col+1);
+            }
+        }
+        
+
+
+    }
+}
+5
+54321
+5432
+543
+54
+5
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        for(row=0;row<=n;row++,System.out.println()){
+            for(col=0;col<n-row;col++){
+                System.out.print(n-col);
+            }
+        }
+        
+
+
+    }
+}
+12345
+678910
+1112131415
+1617181920
+2122232425
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        int count=0;
+        for(row=0;row<n;row++,System.out.println()){
+            for(col=0;col<n;col++){
+                count++;
+                System.out.print(count);
+                
+            }
+        }
+    }
+}
+4
+1
+24
+135
+2468
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        int c1=0;
+        for(row=0;row<n;row++,System.out.println()){
+            if(row%2==0)
+            c1=1;
+            else
+            c1=2;
+            for(col=0;col<=row;col++){
+                System.out.print(c1);
+                c1+=2;
+            }
+        }
+    }
+}
+
+*   *
+ * * 
+  *  
+ * * 
+*   *
+import java.util.Scanner;
+public class index {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int row,col;
+        
+        for(row=0;row<n;row++,System.out.println()){
+
+            for (col=0;col<n;col++)
+                if(row==col||row+col==n-1)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            
+ 
+        }
+
+        
+
+
+    }
+}
