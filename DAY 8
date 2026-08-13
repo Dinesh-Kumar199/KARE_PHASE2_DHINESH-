@@ -1,0 +1,132 @@
+//I/p             o/p
+// 5       
+//13 65 78 21 9   13 65 78 21 9
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int [] arr=new int[n];
+        for (int i =0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+//write the java programe to find the sum of array elementd
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int [] arr=new int[n];
+        for (int i =0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int sum=0;
+        for(int i=0;i<n;i++){
+            sum+=arr[i];
+        }
+        System.out.print(sum);
+    }
+}
+//write the java programe to find the odd even element count in the given array
+5
+10 2 34 5 23
+even number count is: 3
+odd element count is: 2
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int [] arr=new int[n];
+        for (int i =0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int odd=0,even=0;
+        for(int i=0;i<n;i++){
+            if(arr[i]%2==0)
+                even++;
+            else
+                odd++;
+        }
+        System.out.print("even number count is: "+even+"\n"+"odd element count is: "+odd);
+    }
+}
+//write the java programe to find whether the given number is present in the array or not
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int [] arr=new int[n];
+        for (int i =0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int ri=sc.nextInt(),flag=0;
+        for(int i=0;i<n;i++){
+            if (arr[i]==ri){
+                flag=1;
+                System.out.print("present "+i);
+                break;
+            }
+            
+        }
+        if(flag==0){
+            System.out.print("not present");
+        }
+    }
+}
+//write the java programe to print reverse of an array
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int [] arr=new int[n];
+        for (int i =0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int s=0,e=n-1,temp;
+        while(s<e){
+            temp=arr[s];
+            arr[s]=arr[e];
+            arr[e]=temp;
+            s++;
+            e--;
+        }
+        for (int i =0;i<n;i++){
+            System.out.print(arr[i]+" ");
+        }
+        }
+    
+    
+}
+//write the java programe to print second largest of an array
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int [] arr=new int[n];
+        for (int i =0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int max=Integer.MIN_VALUE;
+        int secmax=0;
+        for(int i=0;i<n;i++){
+            if(arr[i]>max){
+                secmax=max;
+                max=arr[i];
+            }
+            else if(arr[i]>secmax && arr[i]<max)
+                secmax=arr[i];
+        }
+        System.out.println(secmax);
+    }
+}
