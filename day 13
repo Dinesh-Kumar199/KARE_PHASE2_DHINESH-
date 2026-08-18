@@ -1,0 +1,406 @@
+// Hybrid Inheritance:
+    
+//   ----------- 
+//   | Class A  |
+//   |          |
+//  -|----------|------------
+// | |          |            |
+// | |  Class B | Class D    |   here we need to create two objects one for the Son and the other for the MOther
+// | |          |            |   the Son will be able to acess the A,B and C where as the D will help to access the 
+//  -|----------|------------     class D and also the class B
+//   |          |  
+//   | Class C  |
+//   |          |
+//   ------------
+
+class GrandFather{
+    void gen1(){
+        System.out.println("Money");
+    }
+}
+class Father extends GrandFather{
+    void gen21(){
+        System.out.println("Gold");
+    }
+}
+class Mother extends Father{
+    void gen22(){
+        System.out.println("silver");
+    }
+}
+class Son extends Father{
+    void gen3(){
+        System.out.println("Coins");
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Son s = new Son();
+        Mother m = new Mother();
+        s.gen3();
+        s.gen21();
+        s.gen1();
+        m.gen22();
+        m.gen21();
+    }
+}
+
+Output:
+Coins
+Gold
+Money
+silver
+Gold
+
+// write a java program to check a specific number is perfect square or not by using function with no argument no return type.
+import java.util.*;
+class Main{
+    void ps(){
+        Scanner sc = new Scanner (System.in);
+        int n=sc.nextInt();
+        int flag=0;
+        for(int i=1;i<n;i++){
+            if(i*i==n){
+                flag=1;
+                System.out.println("Perfect Square");
+                break;
+            }
+        }
+        if(flag==0){
+            System.out.println("Not a perfect square");
+        }
+    }
+    public static void main(String args[]){
+        Main s=new Main();
+        s.ps();
+    }
+}
+
+Output:
+9
+Perfect Square
+// write a java program to check a specific number is power of 2 or not by using function with argument no return type.
+import java.util.*;
+class Main{
+    void powerOftwo(int n){
+        while(n%2==0){
+            n=n/2;
+        }
+        if(n==1){
+            System.out.println("Power Of Two");
+        } else {
+            System.out.println("Not a Power Of Two");
+        }
+    }
+    public static void main(String args[]){
+        Main s=new Main();
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        s.powerOftwo(n);
+    }
+}
+
+Output:
+4
+Power Of Two
+
+
+//function with no arguments and with return type
+// syntax
+//returntype functionname(){
+//     set of statements
+//     return 
+// }
+
+// write a java program to check whether the given number is a automorphic number
+// 1. get the input from the User 
+// 2. find the square of the given value
+// 3. to count the no of digits in the given number
+// 4. power = pow(10,count)
+// 5.sqr%power == n 
+// 6.sqr%power == n:
+//     print("automorphic")
+// 7.else:
+//     print(:NOt a automorphic)
+
+import java.util.*;
+public class Main{
+public boolean CheckAutomorphic(){
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int temp = n;
+    int count = 0;
+    int sq = n*n;
+    while(n!=0){
+        n=n/10;
+        count++;
+    }
+    int power = (int) Math.pow(10,count);
+    if(sq%power == temp){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+public static void main(String[] args){
+    Main obj = new Main();
+    boolean ans = obj.CheckAutomorphic();
+    if(ans){
+        System.out.print("automorphic");
+    }
+    else{
+        System.out.print("Not automorphic");
+    }
+}
+}
+
+Output:
+7
+Not automorphic
+
+// write a java program to check a specific number is perfect cube or not or not by using function with argument with return type.
+import java.util.*;
+class Main{
+    boolean percube(int n){
+        for(int i=1;i<=n/2;i++){
+            if(i*i*i==n){
+                return true;
+            }
+        }
+            return false;
+    }
+   public static void main(String args[]){
+       Main s=new Main();
+       Scanner sc = new Scanner (System.in);
+       int n=sc.nextInt();
+       boolean ans = s.percube(n);
+       if(ans){
+           System.out.println("Perfect Cube");
+       } else {
+           System.out.println("Not a Perfect Cube");
+       }
+   }
+}
+
+Output:
+64
+Perfect Cube
+
+//program to find the average of elements which are even and divisible by 3 and print the average with two decimal points.
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        float sum=0;
+        int count=0;
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i] = sc.nextInt();
+            if(arr[i]%2 == 0 && arr[i]%3 ==0){
+                sum+=arr[i];
+                count++;
+            }
+        }
+        System.out.printf("the avg is %.2f",sum/count);
+    }
+}
+
+Output:
+5
+2 4 6 18 24
+the avg is 16.00
+
+
+//program to find the power of a given number without using inbuilt method 
+import java.util.*;
+public class Main{
+    public int Power(int a, int b){
+        int pow=1;
+        int i=0;
+        for(i=0;i<b;i++){
+            pow*=a;
+        }
+        return pow;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n =sc.nextInt();
+        int m = sc.nextInt();
+        Main obj = new Main();
+        int res = obj.Power(n,m);
+        System.out.print("the power of "+ n + " power " + m + " is " + res);
+    }
+    }
+
+Output:
+2
+3
+the power of 2 power 3 is 8
+
+
+Recursion:
+in java, whena function calls a copy of itself then the process is known as Recursion
+
+Syntax:
+void recursion()
+{
+recursion();// the recursive function calls itself inside the same function
+}
+public static void main(String[] args){
+recursion(); // function call
+}
+
+Types of Recursion
+                    Recursion
+                        |
+           ----------------------------
+           |                           |
+           |                           |
+        Direct                      Indirect
+           |                           
+         Tail
+         Head
+         Tree
+        Nested
+        Linear
+
+Direct Recursion:
+when a function calls itself within the same function repeatedly, it is called the direct recursion
+
+Structure:
+fun()
+{
+fun();
+}
+
+Indirect Recursion function:
+when a function is mutually called by another function in a circular manner, the function is called an indirect recursion function.
+
+Structure:
+fun1()
+{
+fun2()
+}
+fun2()
+{
+fun3()
+}
+
+TAIL RECURSION    
+
+
+        fun(3)
+         |
+   - - - - - - - -
+   |             | 
+print 3        fun(2)
+                 |
+        -------------------
+        |                  |
+      print 2            fun(1)
+                           |
+                   --- - - - - - - -
+                  |                 |
+            print 0               fun(0)    the condition becomes false
+
+// TAIL Recursion
+import java.util.*;
+public class Main{
+    static void fun(int n){
+        if(n!=0){
+            System.out.print(n + " ");
+            fun(n-1);
+        }
+    }
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+    fun (num);
+}
+}
+Output:
+9
+9 8 7 6 5 4 3 2 1 
+
+HEAD RECURSION
+                                  fun(3)
+                                    |
+                         ----------------------
+                         |                     |
+                       fun(2)                print(3)
+                         |
+                - - -- - - - - -- -
+                |                  |
+            fun(1)               print(2)
+              |
+    --------------------
+    |                  |
+   fun(0)            print(1)
+    |
+   reached Base Condition 
+   and the condition becomes 
+   false
+
+// HEAD Recursion
+import java.util.*;
+public class Main{
+    static void fun(int n){
+        if(n!=0){
+            fun(n-1);
+            System.out.print(n + " ");
+            
+        }
+    }
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+    fun (num);
+}
+}
+Output:
+8
+1 2 3 4 5 6 7 8 
+
+
+// Linear Recursion
+import java.util.*;
+public class Main{
+    static int factorial(int n){
+        int fact =1;
+        if(n==0 || n==1){
+            fact =1;
+            }
+        else{
+            fact = n*factorial(n-1);
+            }
+        return fact;
+    }
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+    int res = factorial(num);
+    System.out.print(res);
+    }
+}
+
+Output:
+6
+720
+example of the linear recursion is factorial
+// Linear Recursion
+import java.util.*;
+public class Main{
+    static int factorial(int n){
+        if(n==0 || n==1)
+        return 1;
+        return n*factorial(n-1);
+    }
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int num = sc.nextInt();
+    int res = factorial(num);
+    System.out.print(res);
+    }
+}
