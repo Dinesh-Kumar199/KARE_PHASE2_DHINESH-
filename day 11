@@ -1,0 +1,85 @@
+inheritance concept using extends keyword
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        //single inheritance
+        //multi inheritance
+        //hybrid inheritance
+        //lets take three classes
+        Son sn = new Son();
+        sn.gen1();
+        sn.gen2();
+        sn.gen3();
+        Father fa = new Father();
+        fa.gen1();
+        fa.gen2();
+        Grandfather gf=new Grandfather();
+       gf.gen1();
+        
+	}
+	 //father
+	 static class Grandfather{
+	     void gen1(){
+	         System.out.print("Money\n");
+	     }
+	 }
+	static class Father extends Grandfather{
+	    void gen2(){
+	        System.out.print("Gold\n");
+	    }
+	}
+	static class Son extends Father{
+	    void gen3(){
+	        System.out.print("Diamond\n");
+	    }
+	}
+}
+
+outpt:
+Money
+Gold
+Diamond
+Money
+Gold
+Money
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+        //single inheritance
+        //multi inheritance
+        //hybrid inheritance
+        //lets take three classes
+        Son sn = new Son();
+        sn.gen31();
+        sn.gen2();
+        Daughter Dh=new Daughter();
+        Dh.gen2();
+        Dh.gen3();
+        Father Fa=new Father();
+        Fa.gen2();
+        
+	}
+	 //father
+	 static class Father{
+	     void gen2(){//we can have a same method in separate classes
+	         System.out.print("Gold");
+	     }
+	 }
+	static class Son extends Father{
+	    void gen31(){
+	        System.out.print("Diamond\n");
+	    }
+	}
+	static class Daughter extends Father{
+	    void gen3(){
+	        System.out.print("Platinum\n");
+	    }
+	}
+}
+
+Diamond
+GoldGoldPlatinum
+Gold
