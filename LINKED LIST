@@ -1,0 +1,511 @@
+SUM OF ELEMENTS IN THE SIGLE CIRCULAR LIST :
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+public class CircularLinkedList {
+
+    Node head;
+
+    int sum() {
+        if (head == null)
+            return 0;
+
+        int sum = 0;
+        Node temp = head;
+
+        do {
+            sum += temp.data;
+            temp = temp.next;
+        } while (temp != head);
+
+        return sum;
+    }
+}
+
+SORT THE ELEMENTS 
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+public class Main {
+    Node head = null;
+
+    void insert(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            newNode.next = head;
+            return;
+        }
+
+        Node temp = head;
+
+        while (temp.next != head) {
+            temp = temp.next;
+        }
+
+        temp.next = newNode;
+        newNode.next = head;
+    }
+
+    void sort() {
+        if (head == null || head.next == head)
+            return;
+
+        Node current = head;
+
+        do {
+            Node index = current.next;
+
+            while (index != head) {
+                if (current.data > index.data) {
+                    int temp = current.data;
+                    current.data = index.data;
+                    index.data = temp;
+                }
+
+                index = index.next;
+            }
+
+            current = current.next;
+
+        } while (current != head);
+    }
+
+    void display() {
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        Node temp = head;
+
+        do {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        } while (temp != head);
+
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Main list = new Main();
+
+        list.insert(40);
+        list.insert(10);
+        list.insert(30);
+        list.insert(20);
+
+        System.out.println("Before sorting:");
+        list.display();
+
+        list.sort();
+
+        System.out.println("After sorting:");
+        list.display();
+    }
+}
+MAXIMUM ELEMENTS
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class Main {
+    Node head = null;
+
+    void insert(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            newNode.next = head;
+            return;
+        }
+
+        Node temp = head;
+
+        while (temp.next != head) {
+            temp = temp.next;
+        }
+
+        temp.next = newNode;
+        newNode.next = head;
+    }
+
+    int maximum() {
+        if (head == null) {
+            System.out.println("List is empty");
+            return -1;
+        }
+
+        int max = head.data;
+        Node temp = head.next;
+
+        while (temp != head) {
+            if (temp.data > max) {
+                max = temp.data;
+            }
+            temp = temp.next;
+        }
+
+        return max;
+    }
+
+    public static void main(String[] args) {
+        Main list = new Main();
+
+        list.insert(40);
+        list.insert(10);
+        list.insert(80);
+        list.insert(20);
+        list.insert(50);
+
+        System.out.println("Maximum element = " + list.maximum());
+    }
+}
+INSERT ELEMENT 
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class Main {
+    Node head = null;
+
+    void insert(int data) {
+        Node newNode = new Node(data);
+
+        // Empty list
+        if (head == null) {
+            head = newNode;
+            newNode.next = head;
+            return;
+        }
+
+        // Go to last node
+        Node temp = head;
+
+        while (temp.next != head) {
+            temp = temp.next;
+        }
+
+        // Insert new node
+        temp.next = newNode;
+        newNode.next = head;
+    }
+
+    void display() {
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        Node temp = head;
+
+        do {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        } while (temp != head);
+
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Main list = new Main();
+
+        list.insert(10);
+        list.insert(20);
+        list.insert(30);
+        list.insert(40);
+
+        list.display();
+    }
+}
+REVERSE THE NUMBER 
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class Main {
+    Node head = null;
+
+    void insert(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            newNode.next = head;
+            return;
+        }
+
+        Node temp = head;
+
+        while (temp.next != head) {
+            temp = temp.next;
+        }
+
+        temp.next = newNode;
+        newNode.next = head;
+    }
+
+    void reverse() {
+        if (head == null || head.next == head)
+            return;
+
+        Node previous = null;
+        Node current = head;
+        Node next;
+
+        do {
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        } while (current != head);
+
+        head.next = previous;
+        head = previous;
+    }
+
+    void display() {
+        if (head == null)
+            return;
+
+        Node temp = head;
+
+        do {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        } while (temp != head);
+
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Main list = new Main();
+
+        list.insert(10);
+        list.insert(20);
+        list.insert(30);
+        list.insert(40);
+
+        System.out.println("Before reverse:");
+        list.display();
+
+        list.reverse();
+
+        System.out.println("After reverse:");
+        list.display();
+    }
+}
+DOUBLE LINKED LIST class Node {
+    int data;
+    Node next;
+    Node prev;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class Main {
+    Node head = null;
+
+    // 1. INSERT ELEMENT
+    void insert(int data) {
+        Node newNode = new Node(data);
+
+        // Empty list
+        if (head == null) {
+            head = newNode;
+            newNode.next = head;
+            newNode.prev = head;
+            return;
+        }
+
+        // Last node
+        Node last = head.prev;
+
+        newNode.next = head;
+        newNode.prev = last;
+
+        last.next = newNode;
+        head.prev = newNode;
+    }
+
+    // 2. SUM OF ELEMENTS
+    int sum() {
+        if (head == null)
+            return 0;
+
+        int sum = 0;
+        Node temp = head;
+
+        do {
+            sum += temp.data;
+            temp = temp.next;
+        } while (temp != head);
+
+        return sum;
+    }
+
+    // 3. SORT ELEMENTS
+    void sort() {
+        if (head == null || head.next == head)
+            return;
+
+        Node current = head;
+
+        do {
+            Node index = current.next;
+
+            while (index != head) {
+                if (current.data > index.data) {
+                    int temp = current.data;
+                    current.data = index.data;
+                    index.data = temp;
+                }
+
+                index = index.next;
+            }
+
+            current = current.next;
+
+        } while (current != head);
+    }
+
+    // 4. MAXIMUM ELEMENT
+    int maximum() {
+        if (head == null)
+            return -1;
+
+        int max = head.data;
+        Node temp = head.next;
+
+        while (temp != head) {
+            if (temp.data > max) {
+                max = temp.data;
+            }
+
+            temp = temp.next;
+        }
+
+        return max;
+    }
+
+    // 5. REVERSE CIRCULAR DOUBLY LINKED LIST
+    void reverse() {
+        if (head == null || head.next == head)
+            return;
+
+        Node current = head;
+
+        do {
+            Node temp = current.next;
+            current.next = current.prev;
+            current.prev = temp;
+
+            current = temp;
+        } while (current != head);
+
+        head = head.next;
+    }
+
+    // DISPLAY FORWARD
+    void displayForward() {
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        Node temp = head;
+
+        do {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        } while (temp != head);
+
+        System.out.println();
+    }
+
+    // DISPLAY BACKWARD
+    void displayBackward() {
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        Node temp = head.prev;
+        Node last = temp;
+
+        do {
+            System.out.print(temp.data + " ");
+            temp = temp.prev;
+        } while (temp != last);
+
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+
+        Main list = new Main();
+
+        // Insert elements
+        list.insert(40);
+        list.insert(10);
+        list.insert(30);
+        list.insert(20);
+
+        System.out.println("Original list:");
+        list.displayForward();
+
+        // Sum
+        System.out.println("Sum = " + list.sum());
+
+        // Maximum
+        System.out.println("Maximum = " + list.maximum());
+
+        // Sort
+        list.sort();
+        System.out.println("After sorting:");
+        list.displayForward();
+
+        // Reverse
+        list.reverse();
+        System.out.println("After reversing:");
+        list.displayForward();
+
+        // Backward display
+        System.out.println("Backward display:");
+        list.displayBackward();
+    }
+}
+
